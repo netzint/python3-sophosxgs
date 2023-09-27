@@ -6,8 +6,8 @@
 
 ## Firewall
 
-* Firewall Rule
-* Firewall rule group
+* Firewall Rule (no position, no webfilter, no waf)
+* ~~Firewall rule group~~
 * NAT rule
 * SSL/TLS Inspection Rule
 * SSL/TLS inspection settings
@@ -138,10 +138,10 @@
 
 ## Network
 
-* Interface
+* ~~Interface~~ (no PPPoE) -> Update Only
 * Bridge Pair
 * Alias
-* VLAN
+* ~~VLAN~~ (no PPPoE)
 * LAG
 * Cellular WAN
 * Add RED Device & Update RED Device

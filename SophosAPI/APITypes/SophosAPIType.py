@@ -5,3 +5,7 @@ class SophosAPIType():
     SERVICES = "Services"
     SERVICEGROUP = "ServiceGroup"
     ZONE = "Zone"
+    VLAN = "VLAN"
+    INTERFACE = "Interface"
+    FIREWALLRULEGROUP = "FirewallRuleGroup"
+    FIREWALLRULE = "FirewallRule"

@@ -4,3 +4,7 @@ from .SophosAPIType_IPHostGroup import *
 from .SophosAPIType_Services import *
 from .SophosAPIType_ServiceGroup import *
 from .SophosAPIType_Zone import *
+from .SophosAPIType_VLAN import *
+from .SophosAPIType_Interface import *
+from .SophosAPIType_FirewallRuleGroup import *
+from .SophosAPIType_FirewallRule import *

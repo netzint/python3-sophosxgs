@@ -18,6 +18,7 @@ class SophosAPI():
         self.loginXML = "<Login><Username>" + self.username + "</Username><Password>" + self.password + "</Password></Login>"
 
     def __requestAPI(self, request):
+        print(request)
         data = {
             "reqxml": "<Request>" + self.loginXML + request + "</Request>"
         }
@@ -30,6 +31,10 @@ class SophosAPI():
     
     def add(self, sophosapitype, object):
         request = "<Set operation=\"add\"><" + sophosapitype + ">" + object.getXML() + "</" + sophosapitype + "></Set>"
+        return self.__requestAPI(request)
+    
+    def update(self, sophosapitype, object):
+        request = "<Set operation=\"update\"><" + sophosapitype + ">" + object.getXML() + "</" + sophosapitype + "></Set>"
         return self.__requestAPI(request)
     
     def remove(self, sophosapitype, name):
