@@ -14,7 +14,7 @@ class SophosAPIType_Zone():
         :param applianceaccess: Sophos API Applicationaccess
         :type applianceaccess: SophosAPIType_Zone_ApplianceAccess
         """
-        self.name = name
+        self.name: str = name
         self.type = type
         self.description = description
         self.applianceaccess = applianceaccess

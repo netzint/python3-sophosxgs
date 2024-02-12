@@ -227,7 +227,7 @@ class SophosAPIType_FirewallRule():
             xml += "</NetworkPolicy>"
         elif self.policytype == self.POLICYTYPE_HTTPBASED:
             xml += "</HTTPBasedPolicy>"
-            
+
         return xml
 # 		<!-- WAF Policy Start -->
 # 		<HTTPBasedPolicy>

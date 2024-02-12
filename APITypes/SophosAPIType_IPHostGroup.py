@@ -31,5 +31,5 @@ class SophosAPIType_IPHostGroup():
             for host in self.hostlist:
                 xml += f"<Host>{host}</Host>"
             xml += "</HostList>"
-            
+
         return xml
