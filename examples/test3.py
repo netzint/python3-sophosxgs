@@ -3,7 +3,7 @@ sys.path.append("../..")
 
 from module_sophosapi import SophosAPI, SophosAPIType, SophosAPIType_VPNIPSecConnection
 
-api = SophosAPI("185.50.122.205", 4444, "admin", "Muster123!")
+api = SophosAPI("10.0.1.1", 4444, "admin", "Muster123!")
 
 # res = api.get(SophosAPIType.IPSECVPN)
 # print(res.getXML())

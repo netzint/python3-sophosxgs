@@ -17,3 +17,5 @@ class SophosAPIType():
     SDWANPOLICYROUTE = "SDWANPolicyRoute"
     DNS="DNS"
     DNSREQUESTROUTE="DNSRequestRoute"
+    USER="User"
+    USERGROUP="UserGroup"

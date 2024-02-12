@@ -1,0 +1,5 @@
+python3-sophosxgs (1.0.0) jammy; urgency=medium
+
+  * initial commit
+
+ -- Lukas Spitznagel <lukas.spitznagel@netzint.de>  Mon, 12 Feb 2024 16:32:02 +0200

@@ -1,0 +1,11 @@
+Source: python3-sophosxgs
+Section: admin
+Priority: optional
+Maintainer: Lukas Spitznagel <lukas.spitznagel@netzint.de>
+Build-Depends: debhelper (>= 4.0.0), fakeroot
+
+Package: python3-sophosxgs
+Architecture: all
+Depends: python3
+Homepage: www.netzint.de
+Description: Python package to connect to sophos xgs via xml api

@@ -16,3 +16,4 @@ from .SophosAPIType_GatewayHost import *
 from .SophosAPIType_SDWANPolicyRoute import *
 from .SophosAPIType_DNS import *
 from .SophosAPIType_DNSRequestRoute import *
+from .SophosAPIType_User import *

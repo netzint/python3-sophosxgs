@@ -61,7 +61,7 @@ class SophosAPIRequest():
     def __init__(self, requestsResponse, sophosapitype=None) -> None:
         self.requestsResponse = requestsResponse
         self.xml = self.requestsResponse.text.split("<?xml version=\"1.0\" encoding=\"UTF-8\"?>")[1].strip().replace("\x00", "")
-        self.data = xmltodict.parse(self.xml)
+        self.data = xmltodict.parse(self.xml, dict_constructor=dict)
         self.sophosapitype = sophosapitype
 
     def __str__(self) -> str:
