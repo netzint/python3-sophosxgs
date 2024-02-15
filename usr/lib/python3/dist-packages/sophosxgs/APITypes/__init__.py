@@ -17,3 +17,5 @@ from .SophosAPIType_SDWANPolicyRoute import *
 from .SophosAPIType_DNS import *
 from .SophosAPIType_DNSRequestRoute import *
 from .SophosAPIType_User import *
+from .SophosAPIType_LiveUserLogin import *
+from .SophosAPIType_LiveUserLogout import *

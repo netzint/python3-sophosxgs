@@ -19,3 +19,5 @@ class SophosAPIType():
     DNSREQUESTROUTE="DNSRequestRoute"
     USER="User"
     USERGROUP="UserGroup"
+    LIVEUSERLOGIN="LiveUserLogin"
+    LIVEUSERLOGOUT="LiveUserLogout"
