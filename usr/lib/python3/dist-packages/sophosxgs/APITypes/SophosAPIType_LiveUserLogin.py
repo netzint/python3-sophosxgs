@@ -19,9 +19,9 @@ class SophosAPIType_LiveUserLogin():
             xml += f"<MacAddress>{self.mac}</MacAddress>"
 
         if self.groupname != "":
-		    xml += f"<GroupName>{self.groupname}</GroupName>"
+            xml += f"<GroupName>{self.groupname}</GroupName>"
 
         if self.devicetype != "":
-		    xml += f"<DeviceType>{self.devicetype}</DeviceType>"
+            xml += f"<DeviceType>{self.devicetype}</DeviceType>"
 
         return xml
