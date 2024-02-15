@@ -1,7 +1,4 @@
-class SophosAPIType_LiveUserLogin():
-
-    DEVICETYPE_IOS = "iOS"
-    DEVICETYPE_ANDROID = "Android"
+class SophosAPIType_LiveUserLogout():
 
     def __init__(self, username, ip) -> None:
         self.username = username

@@ -44,8 +44,11 @@ class SophosAPI():
         request = "<Set><" + sophosapitype + ">" + object.getXML() + "</" + sophosapitype + "></Set>"
         return self.__requestAPI(request, sophosapitype)
 
-    def request(self, sophosapitype, object):
-        request = "<" + sophosapitype + ">" + object.getXML() + "</" + sophosapitype + ">"
+    def request(self, sophosapitype, object, addAdminLogin=True):
+        if addAdminLogin:
+            request = "<" + sophosapitype + "><Admin><Username>" + self.username + "</Username><Password>" + self.password + "</Password></Admin>" + object.getXML() + "</" + sophosapitype + ">"
+        else:
+            request = "<" + sophosapitype + ">" + object.getXML() + "</" + sophosapitype + ">"
         return self.__requestAPI(request, sophosapitype)
     
     def remove(self, sophosapitype, name):
