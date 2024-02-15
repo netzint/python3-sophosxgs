@@ -43,6 +43,10 @@ class SophosAPI():
     def set(self, sophosapitype, object):
         request = "<Set><" + sophosapitype + ">" + object.getXML() + "</" + sophosapitype + "></Set>"
         return self.__requestAPI(request, sophosapitype)
+
+    def request(self, sophosapitype, object):
+        request = "<" + sophosapitype + ">" + object.getXML() + "</" + sophosapitype + ">"
+        return self.__requestAPI(request, sophosapitype)
     
     def remove(self, sophosapitype, name):
         request = "<Remove><" + sophosapitype + "><Name>" + name + "</Name></" + sophosapitype + "></Remove>"
