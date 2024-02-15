@@ -16,7 +16,7 @@ class SophosAPIType_LiveUserLogin():
 		<IPAddress>{self.ip}</IPAddress>"""
 
         if self.mac != "":
-		    xml += f"<MacAddress>{self.mac}</MacAddress>"
+            xml += f"<MacAddress>{self.mac}</MacAddress>"
 
         if self.groupname != "":
 		    xml += f"<GroupName>{self.groupname}</GroupName>"
