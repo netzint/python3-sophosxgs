@@ -21,3 +21,4 @@ class SophosAPIType():
     USERGROUP="UserGroup"
     LIVEUSERLOGIN="LiveUserLogin"
     LIVEUSERLOGOUT="LiveUserLogout"
+    USERSTATUS="UserStatus"
