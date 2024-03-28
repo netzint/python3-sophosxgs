@@ -1,9 +1,11 @@
 import requests
 import xmltodict
 import json
+import base64
 
 import xml.etree.ElementTree as ET
 
+from cryptography.fernet import Fernet
 from urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 
@@ -13,7 +15,7 @@ class SophosAPI():
         self.url = url
         self.port = str(port)
         self.username = username
-        self.password = password
+        self.password = self.__decryptPassword(password)
 
         self.requestURL = "https://" + self.url + ":" + self.port + "/webconsole/APIController"
         self.loginXML = "<Login><Username>" + self.username + "</Username><Password>" + self.password + "</Password></Login>"
@@ -25,6 +27,15 @@ class SophosAPI():
         request = requests.post(self.requestURL, data=data, verify=False)
         return SophosAPIRequest(request, sophosapitype)
     
+    def __decryptPassword(self, password):
+        try:
+            with open("/etc/machine-id", "r") as f:
+                crypt = Fernet(base64.urlsafe_b64encode(f.read().replace("\n", "").encode()))
+                return crypt.decrypt(password).decode()
+        except Exception as e:
+            print("ERROR: Failed to decrypt password in config! " + str(e))
+            exit()
+
     def rawRequest(self, request):
         return self.__requestAPI(request)
 
@@ -49,7 +60,6 @@ class SophosAPI():
         <{sophosapitype}>{object1.getXML()}</{sophosapitype}>
         <{sophosapitype}>{object2.getXML()}</{sophosapitype}>
         </Set>"""
-        print(request)
         return self.__requestAPI(request, sophosapitype)
 
     def request(self, sophosapitype, object, addAdminLogin=True):

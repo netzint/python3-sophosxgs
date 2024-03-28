@@ -6,6 +6,6 @@ Build-Depends: debhelper (>= 4.0.0), fakeroot
 
 Package: python3-sophosxgs
 Architecture: all
-Depends: python3
+Depends: python3, python3-cryptography, python3-xmltodict
 Homepage: www.netzint.de
 Description: Python package to connect to sophos xgs via xml api
