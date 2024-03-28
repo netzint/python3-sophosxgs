@@ -44,6 +44,14 @@ class SophosAPI():
         request = "<Set><" + sophosapitype + ">" + object.getXML() + "</" + sophosapitype + "></Set>"
         return self.__requestAPI(request, sophosapitype)
 
+    def toggle(self, sophosapitype, object1, object2):
+        request = f"""<Set>
+        <{sophosapitype}>{object1.getXML()}</{sophosapitype}>
+        <{sophosapitype}>{object2.getXML()}</{sophosapitype}>
+        </Set>"""
+        print(request)
+        return self.__requestAPI(request, sophosapitype)
+
     def request(self, sophosapitype, object, addAdminLogin=True):
         if addAdminLogin:
             request = "<" + sophosapitype + "><Admin><Username>" + self.username + "</Username><Password>" + self.password + "</Password></Admin>" + object.getXML() + "</" + sophosapitype + ">"
