@@ -6,7 +6,9 @@ class SophosAPIType_VPNIPSecConnection():
     CONNECTION_TYPE_TUNNEL_INTERFACE = "TunnelInterface"
 
     POLICY_IKEv2 = "IKEv2"
-
+    POLICY_HO_IKEv2 = "Head office (IKEv2)"
+    POLICY_BO_IKEv2 = "Branch office (IKEv2)"
+    
     ACTION_ON_VPN_RESTART_DISABLE = "Disable"
     ACTION_ON_VPN_RESTART_RESPOND_ONLY = "RespondOnly"
     ACTION_ON_VPN_RESTART_INITIATE = "Initiate"
